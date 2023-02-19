@@ -12,7 +12,7 @@ export const path = {
     html: `${buildFolder}/`,
   },
   src: {
-    scss: `${srcFolder}/scss/style.scss`,
+    scss: `${srcFolder}/scss/*.scss`,
     html: `${srcFolder}/html/*.html`,
   },
   watch: {
