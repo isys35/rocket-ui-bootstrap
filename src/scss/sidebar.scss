@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  height: 30px;
+
+  img {
+    height: 30px;
+  }
+}
+
+.sidebar {
+  width: 280px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+
+  &__logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}

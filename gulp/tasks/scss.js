@@ -11,7 +11,6 @@ export const scss = () => {
   return (
     app.gulp
       .src(app.path.src.scss)
-      .pipe(app.plugins.replace(/@img\//g, '../img/'))
       .pipe(
           sass(
               {

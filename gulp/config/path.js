@@ -11,15 +11,17 @@ export const path = {
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
     images: `${buildFolder}/img/`,
+    material_icons: `${buildFolder}/fonts/`
   },
   src: {
-    scss: `${srcFolder}/scss/*.scss`,
+    scss: `${srcFolder}/scss/ghost_menu.scss`,
     html: `${srcFolder}/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+    material_icons: `./node_modules/material-icons/iconfont/*.woff{,2}`,
   },
   watch: {
     scss: `${srcFolder}/scss/**/*.scss`,
-    html: `${srcFolder}/html/**/*.html`,
+    html: `${srcFolder}/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp,svg}`,
   },
   clean: buildFolder,

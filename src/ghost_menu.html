@@ -13,17 +13,48 @@
         <div class="main__wrapper">
             <div class="sidebar">
                 <div class="sidebar__wrapper">
-                    <div class="sidebar__logo">
+                    <div class="sidebar__logo ps-3 pe-3">
                         <a href="#" class="logo" alt="logo">
                             <img src="img/logo.svg" alt="">
                         </a>
                     </div>
                     <div class="sidebar__main">
-                        <div class="sidebar__search"></div>
-                        <div class="sidebar__menu"></div>
-                        <div class="sidebar__menu"></div>
+                        <div class="sidebar__search p-2">
+                            <label class="visually-hidden" for="search">Username</label>
+                            <div class="input-group">
+                              <div class="input-group-text">@</div>
+                              <input type="text" class="form-control" id="search" placeholder="Поиск">
+                            </div>
+                        </div>
+                        <div class="sidebar__menu p-2">
+                            <p class="title p-2">Favorites</p>
+                            <ul>
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Bookmark</a></li>
+                                <li><a href="">Reports</a>
+                                    <ul>
+                                        <li><a href="#">Revenue</a></li>
+                                        <li><a href="#">Expenses</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Messages</a></li>
+                                <li><a href="#">Calendar</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar__menu">
+                            <p class="title">Application</p>
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Perfomance</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="sidebar__profile"></div>
+                    <div class="sidebar__profile">
+                        <a href="#">Profile</a>
+                    </div>
                 </div>
             </div>
             <div class="content">

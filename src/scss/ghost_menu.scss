@@ -6,14 +6,8 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+@import "variables";
 
-
-$link-decoration: none;
 
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -58,3 +52,6 @@ $link-decoration: none;
 // Utilities
 @import "../../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+
+
+@import "sidebar";

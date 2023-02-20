@@ -18,6 +18,7 @@ import { scss } from './gulp/tasks/scss.js';
 import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
 import { images } from './gulp/tasks/images.js';
+import { fonts } from './gulp/tasks/fonts.js';
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -28,7 +29,7 @@ function watcher() {
 
 // Основные задачи
 const mainTasks = gulp.series(
-    gulp.parallel(html, scss, images),
+    gulp.parallel(html, scss, images, fonts),
 );
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
