@@ -1,0 +1,50 @@
+.side-nav {
+  // Тут ещё используются градиенты, но я не понял для чего они
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 270px;
+  flex-direction: column;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: var(--bs-color-primary);
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+  transition-property: width;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  &:before {
+    content: "";
+    background-size: 270px auto;
+    background-position: right 3.5rem;
+    -webkit-animation: .4s intro-devider-animation ease-in-out .33333s;
+    animation: .4s intro-devider-animation ease-in-out .33333s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    background-image: url(../img/bg-main.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 3.5rem;
+    height: 100vh;
+    width: 100%;
+  }
+  &__header {
+    height: 33px;
+    &__logo {
+      width: 1.6rem;
+    }
+  }
+}
