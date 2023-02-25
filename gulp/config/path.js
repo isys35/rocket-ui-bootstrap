@@ -11,10 +11,10 @@ export const path = {
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
     images: `${buildFolder}/img/`,
-    material_icons: `${buildFolder}/fonts/`
+    material_icons: `${buildFolder}/fonts/material-icons/`
   },
   src: {
-    scss: `${srcFolder}/scss/ghost_menu.scss`,
+    scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
     material_icons: `./node_modules/material-icons/iconfont/*.woff{,2}`,
