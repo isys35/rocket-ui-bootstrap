@@ -48,3 +48,7 @@
     }
   }
 }
+
+.side-nav .side-nav__header .side-nav__header__toggler, .side-nav .side-nav__header .mobile-menu-toggler {
+    z-index: 5;
+}

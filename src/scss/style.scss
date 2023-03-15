@@ -13,6 +13,17 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/utilities";
 
+$utilities: map-merge(
+  $utilities,
+  (
+    "width-sizes": (
+      property: width,
+      class: width,
+      values: map-merge($width-sizes, (auto: auto))
+    ),
+  )
+);
+
 // Layout & components
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
@@ -74,6 +85,33 @@ img, svg, video, canvas, audio, iframe, embed, object {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}
+
+
+.duration-300 {
+    transition-duration: .3s;
+}
+
+.ease-in-out {
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+
+
+//.text-opacity-70 {
+//    --bs-text-opacity: .7;
+//}
+
+@media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
 }
 
 @import "sidebar";

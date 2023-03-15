@@ -47,7 +47,13 @@ $spacers: (
   2: $spacer * .5,
   2\.5: $spacer * .625,
   3: $spacer,
+  3\.5: $spacer * 1.25,
   4: $spacer * 1.5,
   5: $spacer * 3,
   6: $spacer * 4
 );
+
+$width-size: 1rem;
+$width-sizes: (
+  5: $width-size * 1.25
+)
