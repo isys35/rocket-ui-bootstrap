@@ -52,3 +52,13 @@
 .side-nav .side-nav__header .side-nav__header__toggler, .side-nav .side-nav__header .mobile-menu-toggler {
     z-index: 5;
 }
+
+.side-nav.side-nav--simple .side-nav__header .side-nav__header__toggler svg {
+    transform: rotate(180deg);
+}
+
+.side-nav .side-nav__header .side-nav__header__toggler svg, .side-nav .side-nav__header .mobile-menu-toggler svg {
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
