@@ -11,10 +11,12 @@ export const path = {
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
     images: `${buildFolder}/img/`,
-    material_icons: `${buildFolder}/fonts/material-icons/`
+    material_icons: `${buildFolder}/fonts/material-icons/`,
+    js: `${buildFolder}/js/`,
   },
   src: {
     scss: `${srcFolder}/scss/style.scss`,
+    js: `${srcFolder}/js/app.js`,
     html: `${srcFolder}/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
     material_icons: `./node_modules/material-icons/iconfont/*.woff{,2}`,
@@ -23,6 +25,7 @@ export const path = {
     scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/*.html`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp,svg}`,
+    js: `${srcFolder}/js/**/*.js`,
   },
   clean: buildFolder,
   buildFolder: buildFolder,

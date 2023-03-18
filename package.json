@@ -15,7 +15,9 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "material-icons": "^1.13.1",
-    "sass": "^1.58.1"
+    "sass": "^1.58.1",
+    "webpack": "^5.76.2",
+    "webpack-stream": "^7.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2"
