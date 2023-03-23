@@ -15,7 +15,9 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "material-icons": "^1.13.1",
+    "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.58.1",
+    "simplebar": "^6.2.2",
     "webpack": "^5.76.2",
     "webpack-stream": "^7.0.0"
   },
