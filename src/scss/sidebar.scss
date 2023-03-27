@@ -54,7 +54,7 @@
     z-index: 10;
     margin-left: -1.25rem;
     padding-left: 1.25rem;
-    mask-image: linear-gradient(to top,rgba(0,0,0,0),black 30px);
+    mask-image: -webkit-linear-gradient(top, rgba(0,0,0,0), black 30px);
     height: 100%;
     overflow-y: auto;
     padding-top: 1.25rem;
