@@ -1,0 +1,30 @@
+.wrapper {
+    height: 100vh;
+    min-width: 0px;
+    flex: 1 1 0%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
+    @media (max-width: 1279px) {
+        margin-left: 0;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
+    &.wrapper--simple {
+      margin-left: 112px;
+      padding-left: 0;
+      @media (max-width: 1279px) {
+        margin-left: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+}
