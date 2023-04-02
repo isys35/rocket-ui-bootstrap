@@ -22,7 +22,12 @@ $utilities: map-merge(
       class: width,
       values: map-merge($width-sizes, (auto: auto))
     ),
-  )
+    "height-sizes": (
+      property: height,
+      class: height,
+      values: map-merge($height-sizes, (auto: auto))
+    ),
+  ),
 );
 
 // Layout & components
@@ -128,6 +133,10 @@ img, svg, video, canvas, audio, iframe, embed, object {
     transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 
 
 //.text-opacity-70 {
@@ -141,3 +150,4 @@ img, svg, video, canvas, audio, iframe, embed, object {
 @import "display";
 @import "wrapper";
 @import "breadcrumb";
+@import "top_bar";

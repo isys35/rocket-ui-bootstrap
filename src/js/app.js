@@ -6,6 +6,7 @@ window.ResizeObserver = ResizeObserver;
 const side_nav = document.querySelector(".side-nav");
 const wrapper = document.querySelector(".wrapper");
 const toggler = document.querySelector(".side-nav__header__toggler");
+const mobileTogglers = document.querySelectorAll('.mobile-menu-toggler');
 
 function toogle(event) {
     event.preventDefault();
@@ -13,5 +14,11 @@ function toogle(event) {
     wrapper.classList.toggle("wrapper--simple");
 }
 
-toggler.addEventListener("click", toogle)
+function toogleMobile(event) {
+    event.preventDefault();
+    side_nav.classList.toggle("side-nav--active");
+}
+
+toggler.addEventListener("click", toogle);
+mobileTogglers.forEach(mobileToggler => mobileToggler.addEventListener("click", toogleMobile));
 new SimpleBar(document.querySelector('.scrollable'));

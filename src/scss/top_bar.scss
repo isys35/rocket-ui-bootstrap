@@ -8,4 +8,20 @@
       padding-left: 1.25rem;
       padding-right: 1.25rem;
   }
+
+  .mobile-menu-toggler {
+    display: flex;
+    height: 38px;
+    width: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border-width: 1px;
+    border-color: #fff3;
+    .mobile-menu-toggler__icon {
+      height: 1.25rem;
+      width: 1.25rem;
+      color: rgb(255 255 255 / 1);
+    }
+  }
 }
