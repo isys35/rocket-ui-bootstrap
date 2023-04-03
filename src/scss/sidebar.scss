@@ -1,12 +1,26 @@
+%side-nav-position {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+@mixin zero-position {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .side-nav {
-  // Тут ещё используются градиенты, но я не понял для чего они
   position: relative;
   display: flex;
   height: 100vh;
   width: 270px;
   flex-direction: column;
   overflow: hidden;
-  --tw-bg-opacity: 1;
   background-color: $primary;
   padding-left: 1.5rem;
   padding-right: 0.5rem;
@@ -14,32 +28,19 @@
   transition-duration: .3s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   &:before {
-    content: "";
+    @extend %side-nav-position;
+    background-image: url(../img/bg-main.png);
     background-size: 270px auto;
     background-position: right 3.5rem;
-    -webkit-animation: .4s intro-devider-animation ease-in-out .33333s;
-    animation: .4s intro-devider-animation ease-in-out .33333s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-delay: .3s;
-    animation-delay: .3s;
-    background-image: url(../img/bg-main.png);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100vh;
-    width: 100%;
     background-repeat: no-repeat;
+    animation: .4s intro-devider-animation ease-in-out .33333s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
     opacity: 0;
   }
   &:after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    @extend %side-nav-position;
     margin-top: 3.5rem;
-    height: 100vh;
-    width: 100%;
     background-image: linear-gradient(to bottom, $primary, rgba($primary, 0.7), rgb(0, 0, 0));
   }
   &__header {
@@ -127,6 +128,39 @@
     }
   }
 
+  @media (max-width: 1279px) {
+    position: absolute;
+    z-index: 52;
+    margin-left: -100%;
+    &::before {
+      @include zero-position;
+      content: "";
+      visibility: hidden;
+      position: fixed;
+      z-index: -2;
+      background-color: rgb(0 0 0 / var(--bs-bg-opacity));
+      --bs-bg-opacity: .6;
+      background-image: none;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: .3s;
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+    }
+    &::after {
+      content: "";
+      margin-top: 0;
+      --bs-bg-opacity: 1;
+      background-color: rgb(var(--color-primary) / var(--bs-bg-opacity));
+    }
+    &.side-nav--active {
+      margin-left: 0;
+      &::before {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
 }
 
 .side-nav .side-nav__header .side-nav__header__toggler, .side-nav .side-nav__header .mobile-menu-toggler {
@@ -191,10 +225,7 @@
       &:before {
         content: "...";
         position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
+        @include zero-position;
         margin-top: -0.875rem;
         width: 100%;
         text-align: center;
@@ -217,44 +248,6 @@
     animation-delay: .1s;
 }
 
-// TODO: media по SASS
-@media (max-width: 1279px) {
-  .side-nav {
-    position: absolute;
-    z-index: 52;
-    margin-left: -100%;
-    &::before {
-      content: "";
-      visibility: hidden;
-      position: fixed;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      z-index: -2;
-      background-color: rgb(0 0 0 / var(--bs-bg-opacity));
-      --bs-bg-opacity: .6;
-      background-image: none;
-      opacity: 0;
-      transition-property: opacity;
-      transition-duration: .3s;
-      transition-timing-function: cubic-bezier(.4,0,.2,1);
-    }
-    &::after {
-      content: "";
-      margin-top: 0;
-      --bs-bg-opacity: 1;
-      background-color: rgb(var(--color-primary) / var(--bs-bg-opacity));
-    }
-    &.side-nav--active {
-      margin-left: 0;
-      &::before {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
-}
 
 .side-nav .scrollable .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
     background-color: #fff3
