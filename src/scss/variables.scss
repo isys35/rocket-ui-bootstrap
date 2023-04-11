@@ -55,10 +55,12 @@ $spacers: (
 
 $width-size: 1rem;
 $width-sizes: (
-  5: $width-size * 1.25
+  5: $width-size * 1.25,
+  10: $width-size * 2.5,
 );
 
 $height-size: 1rem;
 $height-sizes: (
-  5: $height-size * 1.25
+  5: $height-size * 1.25,
+  10: $height-size * 2.5,
 )

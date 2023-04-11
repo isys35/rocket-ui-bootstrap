@@ -3,6 +3,8 @@ import ResizeObserver from 'resize-observer-polyfill';
 import SimpleBar from "simplebar";
 window.ResizeObserver = ResizeObserver;
 
+import { Dropdown } from 'bootstrap';
+
 const side_nav = document.querySelector(".side-nav");
 const wrapper = document.querySelector(".wrapper");
 const toggler = document.querySelector(".side-nav__header__toggler");

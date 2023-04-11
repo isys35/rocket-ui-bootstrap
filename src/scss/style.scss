@@ -42,7 +42,7 @@ $utilities: map-merge(
 //@import "../../node_modules/bootstrap/scss/buttons";
 //@import "../../node_modules/bootstrap/scss/transitions";
 //@import "../../node_modules/bootstrap/scss/button-group";
-//@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/dropdown";
 //@import "../../node_modules/bootstrap/scss/nav";
 //@import "../../node_modules/bootstrap/scss/navbar";
 //@import "../../node_modules/bootstrap/scss/card";
@@ -141,6 +141,35 @@ img, svg, video, canvas, audio, iframe, embed, object {
     cursor: pointer;
 }
 
+.text-slate-200 {
+    color: $slate-200;
+}
+
+.border-opacity-10 {
+    --tw-border-opacity: .1;
+}
+
+.border-white {
+    border-color: rgb(255 255 255);
+}
+
+.border-2 {
+    border-width: 2px;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.image-fit {
+  position: relative;
+  &>img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
 
 
 @import "sidebar";
@@ -149,3 +178,4 @@ img, svg, video, canvas, audio, iframe, embed, object {
 @import "wrapper";
 @import "breadcrumb";
 @import "top_bar";
+@import "intro";
